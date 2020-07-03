@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         else{
             console.log(body.historical)
-            callback(undefined, body.current.weather_descriptions[0] +". The temperature is " +body.current.temperature+ " Celsius. Humididty is "+body.current.humidity)
+            callback(undefined, body.current.weather_descriptions[0] +". It is currently " +body.current.temperature+ " degrees out. Humididty is "+body.current.humidity+"%. The precipation is "+body.current.precip)
         }
     })
 }
