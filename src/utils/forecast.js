@@ -14,7 +14,6 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         }
         else{
-            console.log(body.historical)
             callback(undefined, body.current.weather_descriptions[0] +". It is currently " +body.current.temperature+ " degrees out. Humididty is "+body.current.humidity+"%. The precipation is "+body.current.precip)
         }
     })
